@@ -1,0 +1,28 @@
+.coin-boxes {
+
+    width: 240px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+.coin-boxes img {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.coin-price-info {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    display: flex;
+}
+
+.coin-price-info p {
+    margin-right: 1rem;
+}
+
+.symbol {
+    font-size: 0.7rem;
+}
