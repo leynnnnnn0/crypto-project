@@ -9,7 +9,7 @@ const CoinBoxes = ({image, symbol, name, price_usd, percentage}) => {
           {name} <span className="symbol">({symbol})</span>
         </p>
         <div className="coin-price-info">
-          <p>${price_usd}</p>
+          <p>{price_usd}</p>
           <p className="up">+{percentage.toFixed(6)}%</p>
         </div>
       </div>

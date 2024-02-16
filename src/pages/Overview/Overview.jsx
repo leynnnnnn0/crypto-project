@@ -4,6 +4,7 @@ import BitcoinPrice from "../../components/BitcoinPrice/BitcoinPrice"
 import "swiper/css";
 import "swiper/css/pagination";
 import Slider from "../../components/Slider";
+import AllCoins from "../../components/AllCoins/AllCoins";
 
 
 
@@ -21,6 +22,9 @@ const Overview = () => {
           <h6>TRENDING COINS</h6>
           <Slider />
         </div>
+        <section>
+          <AllCoins/>
+        </section>
       </section>
     </div>
   );

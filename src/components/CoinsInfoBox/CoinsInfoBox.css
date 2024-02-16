@@ -1,0 +1,28 @@
+.coins-box-info {
+    height: 80px;
+    width: 600px;
+    background: var(--primary-color);
+    justify-self: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.coin-name-image {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.coin-name-image img {
+    height: 30px;
+}
+
+.coin-price {
+    width: 100px;
+
+}
+.percent-change {
+    width: 100px;
+
+}

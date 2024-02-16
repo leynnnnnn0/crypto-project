@@ -27,12 +27,16 @@ const Slider = () => {
       store.fetchCoinsData();
     }, []);
   return (
-      <>
-          <Swiper speed={500} {...sliderSettings}>
-              {coins && data}
-          </Swiper>
-      </>
-  )
+    <>
+      <Swiper
+        speed={500}
+        slidesPerView={1}
+        {...sliderSettings}
+      >
+        {coins && data}
+      </Swiper>
+    </>
+  );
 }
 
 export default Slider
