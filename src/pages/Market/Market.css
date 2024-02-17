@@ -35,3 +35,19 @@
 .market-chart-area {
     align-self: center;
 }
+
+.coin-details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-the-coin {
+    display: flex;
+    align-items: center;
+}
+
+.about-the-coin img {
+    height: 30px;
+}
