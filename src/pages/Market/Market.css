@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     background: var(--primary-color);
-
 }
 
 .treding-coin-sidebar {
@@ -46,8 +45,22 @@
 .about-the-coin {
     display: flex;
     align-items: center;
+
 }
 
 .about-the-coin img {
     height: 30px;
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+}
+
+.range-buttons .buy {
+    background: greenyellow;
+}
+
+.range-buttons  .sell {
+    background: red;
 }

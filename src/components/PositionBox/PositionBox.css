@@ -1,0 +1,44 @@
+.w-or-l, .entry-current-price, .coin-image{
+    background: var(--secondary-color);
+    width: 200px;
+    height: 70px;
+}
+
+.w-or-l {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 10px 10px 20px 20px;
+}
+
+.entry-current-price {
+    font-size: 0.7rem;
+    display: flex;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.entry, .current {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin-image img {
+    height: 30px;
+}
+
+.coin-image {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 20px 20px 10px 10px;
+    align-items: center;
+}
+
+.coin-image p {
+    font-size: 0.7rem;
+}

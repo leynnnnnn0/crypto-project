@@ -1,0 +1,44 @@
+.wallet {
+    display: flex;
+    background: var(--primary-color);
+}
+
+.wallet-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wallet-money {
+    display: flex;
+}
+
+.wallet-money>div {
+    width: 300px;
+}
+
+.wallet-money>div p {
+    color: #b2b2b2;
+    font-size: 0.7rem;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.positions {
+    height: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.positions-list {
+    display: flex;
+    gap: 1rem;
+}

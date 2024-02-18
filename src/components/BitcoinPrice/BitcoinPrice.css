@@ -21,6 +21,13 @@
     font-size: 2rem;
 }
 
+.symbol-design {
+    padding: 0.1rem;
+    background: aquamarine;
+    border-radius: 10px;
+    color: black;
+}
+
 
 .bitcoin-logo {
     display: flex;

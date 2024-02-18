@@ -62,7 +62,6 @@ const marketChartStore = create((set) => ({
         },
       });
 
-      console.log(marketChartStore.getState().coinInfo);
     } catch (err) {
       console.log(err);
     }

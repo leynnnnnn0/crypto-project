@@ -2,11 +2,14 @@ import "./Market.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { AreaChart, Area } from "recharts";
 import { trendingCoinsStore } from "../../store/trendingCoinsStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CoinBoxes from "../../components/CoinBoxes/CoinBoxes";
 import { marketChartStore } from "../../store/marketChartStore";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import NoResult from "../../components/NoResult/NoResult";
+import BuyAndSell from "../../components/BuyAndSell/BuyAndSell";
+import OutsideClickHandler from "react-outside-click-handler";
+import { walletStore } from "../../store/walletStore";
 
 const Market = () => {
   const store = trendingCoinsStore();
@@ -14,6 +17,15 @@ const Market = () => {
   const store2 = marketChartStore();
   const chartData = store2.chartData;
   const { name, symbol, image, usdPrice, btcPrice, change_percentage } = store2.coinInfo;
+  const [show, setShow] = useState(false);
+  const wallet = walletStore();
+
+  const handleShow = () => {
+    wallet.setCurrentPrice(usdPrice);
+    setShow(!show);
+  }
+
+    
 
   useEffect(() => {
     store2.fetchChartData();
@@ -38,6 +50,11 @@ const Market = () => {
 
   return (
     <div className="market">
+      {show && (
+        <OutsideClickHandler onOutsideClick={handleShow}>
+          <BuyAndSell currentPrice={usdPrice.toLocaleString()}/>
+        </OutsideClickHandler>
+      )}
       <section className="side-bar-section">
         <Sidebar />
       </section>
@@ -50,8 +67,21 @@ const Market = () => {
           <>
             <div className="about-the-coin">
               <img src={image} alt={name} />
-              <h3>{name} ({symbol})</h3>
+              <h3>
+                {name} <span className="symbol-design">{symbol}</span>
+              </h3>
             </div>
+            <div className="more">
+              <p>Price in usd: {usdPrice}</p>
+              <p>Price in btc: {btcPrice}</p>
+              <p>
+                Change Percentage:{" "}
+                <span className={change_percentage > 0 ? "up" : "down"}>
+                  {change_percentage}%
+                </span>
+              </p>
+            </div>
+
             <div className="market-chart-area">
               <AreaChart
                 width={700}
@@ -76,6 +106,8 @@ const Market = () => {
                 <button onClick={() => store2.setRange(30)}>Week</button>
                 <button onClick={() => store2.setRange(120)}>Months</button>
                 <button onClick={() => store2.setRange(365)}>Years</button>
+                <button className="buy" onClick={handleShow}>BUY</button>
+                <button className="sell">SELL</button>
               </div>
             </div>
           </>
