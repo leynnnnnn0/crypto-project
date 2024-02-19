@@ -20,11 +20,13 @@ const Market = () => {
   const [show, setShow] = useState(false);
   const wallet = walletStore();
 
-  const handleShow = () => {
+  const [position, setPosition] = useState("");
+
+  const handleShow = (position) => {
     wallet.setCurrentPrice(usdPrice);
     setShow(!show);
-  }
-
+    setPosition(position);
+  };
     
 
   useEffect(() => {
@@ -52,7 +54,10 @@ const Market = () => {
     <div className="market">
       {show && (
         <OutsideClickHandler onOutsideClick={handleShow}>
-          <BuyAndSell currentPrice={usdPrice.toLocaleString()}/>
+          <BuyAndSell
+            position={position}
+            currentPrice={usdPrice.toLocaleString()}
+          />
         </OutsideClickHandler>
       )}
       <section className="side-bar-section">
@@ -106,8 +111,12 @@ const Market = () => {
                 <button onClick={() => store2.setRange(30)}>Week</button>
                 <button onClick={() => store2.setRange(120)}>Months</button>
                 <button onClick={() => store2.setRange(365)}>Years</button>
-                <button className="buy" onClick={handleShow}>BUY</button>
-                <button className="sell">SELL</button>
+                <button className="buy" onClick={() => handleShow("buy")}>
+                  BUY
+                </button>
+                <button className="sell" onClick={() => handleShow("sell")}>
+                  SELL
+                </button>
               </div>
             </div>
           </>

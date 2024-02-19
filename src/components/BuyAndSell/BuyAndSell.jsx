@@ -4,7 +4,7 @@ import { walletStore } from "../../store/walletStore";
 import { useEffect } from "react";
 import { marketChartStore } from "../../store/marketChartStore";
 
-const BuyAndSell = () => {
+const BuyAndSell = ({position}) => {
     const market = marketChartStore();
     const { name, symbol, image, usdPrice,  } =
       market.coinInfo;
@@ -12,7 +12,7 @@ const BuyAndSell = () => {
 
     const handleButton = (e) => {
         e.preventDefault();
-        wallet.setTransactionInfo(image, name, symbol, usdPrice);
+        wallet.setTransactionInfo(image, name, symbol, usdPrice, position);
     }
     useEffect(() => {
         wallet.setTotalAmount();
@@ -21,7 +21,7 @@ const BuyAndSell = () => {
     <div className="buy-and-sell">
       <div className="b-and-s-box">
         <div className="b-or-s">
-          <h3>BUY</h3>
+                  <h3 className={position === "buy" ? "postion green" : "position red"}>{position}</h3>
         </div>
         <form>
           <div className="num-of-coins">

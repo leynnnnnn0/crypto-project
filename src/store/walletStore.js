@@ -22,7 +22,7 @@ const walletStore = create((set) => ({
         set({ currentPrice })
     },
 
-    setTransactionInfo: (image, name, symbol, entryPrice) => {
+    setTransactionInfo: (image, name, symbol, entryPrice, position) => {
         const { numOfCoins, currentPrice } = walletStore.getState();
         set({
             transactionInfo: {
@@ -31,7 +31,8 @@ const walletStore = create((set) => ({
                 image,
                 name,
                 symbol,
-                entryPrice
+                entryPrice,
+                position
             }
         })
         walletStore.getState().setCurrentBalance();

@@ -30,7 +30,6 @@ const Slider = () => {
     <>
       <Swiper
         speed={500}
-        slidesPerView={1}
         {...sliderSettings}
       >
         {coins && data}

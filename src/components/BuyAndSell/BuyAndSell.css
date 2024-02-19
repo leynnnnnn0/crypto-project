@@ -23,12 +23,19 @@
 }
 
 .b-or-s h3 {
-    background: greenyellow;
     width: fit-content;
     padding: 0.3rem;
     border-radius: 10px;
     color: black;
     font-weight: bolder;
+}
+
+.green {
+    background: greenyellow;
+}
+
+.red {
+    background: red;
 }
 
 .num-of-coins input {
@@ -61,3 +68,4 @@ form{
     border: 1px solid white;
     cursor: pointer;
 }
+
