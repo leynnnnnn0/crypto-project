@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+let myObj = {
+    name: "Nathaniel",
+    age: 56
+}
+
+convert to string
+let myObj_serialized = JSON.stringfy(myObjc);
+
+localstorage.setItem("myObj", myObjc);
+
+convert to obj
+
+let myObj_deserialized = JSON.parse(localStoraoge.getItem("myObj"));
+
+

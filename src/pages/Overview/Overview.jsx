@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import Slider from "../../components/Slider";
 import AllCoins from "../../components/AllCoins/AllCoins";
 import WalletOverview from "../../components/WalletOverview/WalletOverview";
+import About from "../../components/About/About";
 
 
 
@@ -28,7 +29,8 @@ const Overview = () => {
         </section>
       </section>
       <section className="wallet-and-position">
-        <WalletOverview/>
+        <WalletOverview />
+        <About/>
       </section>
     </div>
   );

@@ -27,3 +27,17 @@
 .small {
     font-size: 0.7rem;
 }
+
+.position-overview {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-positions {
+    align-self: center;
+    justify-self: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    
+}

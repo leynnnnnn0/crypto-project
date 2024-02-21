@@ -16,11 +16,6 @@ const sidebarData = [
     to: "/wallet",
   },
   {
-    name: "Charts",
-    icon: <FaChartArea />,
-    to: "/charts",
-  },
-  {
     name: "Market",
       icon: <SiCoinmarketcap />,
     to: "/market"
