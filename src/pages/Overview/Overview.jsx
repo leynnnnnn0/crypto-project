@@ -1,8 +1,6 @@
 import "./Overview.css"
 import Sidebar from "../../components/Sidebar/Sidebar"
 import BitcoinPrice from "../../components/BitcoinPrice/BitcoinPrice"
-import "swiper/css";
-import "swiper/css/pagination";
 import Slider from "../../components/Slider";
 import AllCoins from "../../components/AllCoins/AllCoins";
 import WalletOverview from "../../components/WalletOverview/WalletOverview";
@@ -24,7 +22,7 @@ const Overview = () => {
           <h6>TRENDING COINS</h6>
           <Slider />
         </div>
-        <section>
+        <section className="all-coins-section">
           <AllCoins/>
         </section>
       </section>

@@ -1,10 +1,10 @@
 export const sliderSettings = {
   breakpoints: {
           0: {
-            slidesPerView: 1,
+            slidesPerView: 3,
           },
           400: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           639: {
             slidesPerView: 3,

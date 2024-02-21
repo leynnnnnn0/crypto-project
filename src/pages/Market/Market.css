@@ -6,7 +6,7 @@
 
 .treding-coin-sidebar {
     width: 40vh;
-    height: 100vh;
+    max-height: 100vh;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;

@@ -10,6 +10,9 @@ import NoResult from "../../components/NoResult/NoResult";
 import BuyAndSell from "../../components/BuyAndSell/BuyAndSell";
 import OutsideClickHandler from "react-outside-click-handler";
 import { walletStore } from "../../store/walletStore";
+import { sliderSettings } from "../../Data/sliderSettings";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Market = () => {
   const store = trendingCoinsStore();
@@ -35,14 +38,16 @@ const Market = () => {
 
   const trendingCoins = coins.map((item) => {
     return (
-      <CoinBoxes
-        key={item.name}
-        name={item.name}
-        symbol={item.symbol}
-        image={item.image}
-        price_usd={item.price}
-        percentage={item.percentage}
-      />
+      <SwiperSlide>
+        <CoinBoxes
+          key={item.name}
+          name={item.name}
+          symbol={item.symbol}
+          image={item.image}
+          price_usd={item.price}
+          percentage={item.percentage}
+        />
+      </SwiperSlide>
     );
   });
 
@@ -124,7 +129,9 @@ const Market = () => {
           <NoResult />
         )}
       </div>
-      <div className="treding-coin-sidebar">{coins && trendingCoins}</div>
+      <div className="treding-coin-sidebar">
+        {coins && <Swiper slidesPerView={6} direction={'vertical'}>{trendingCoins}</Swiper>}
+      </div>
     </div>
   );
 };

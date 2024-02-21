@@ -62,9 +62,9 @@ const BitcoinPrice = () => {
             </AreaChart>
           </div>
         </>
-      ) : (
+      ) : 
         <ClipLoader color="rgba(174, 176, 176, 1)" />
-      )}
+      }
     </div>
   );
 }
